@@ -21,8 +21,14 @@ INCLUDEL := src
 LIBS    :=
 LIBDIRS :=
 
+ifeq ($(TP),Linux)
+LIBS += rt m
+else ifeq ($(TP),Win32)
+LIBS += gdi32
+endif
+
 # frameworks (macOS only)
-FWORKS :=
+FWORKS := Cocoa IOKit CoreFoundation
 
 # in-tree 3rd-party libraries
 3PLIBDIR := 3rdparty
