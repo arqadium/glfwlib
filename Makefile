@@ -46,6 +46,10 @@ CFILES   := \
 	src/window.c
 MFILES   :=
 HFILES   := \
+	include/glad/vulkan.h \
+	include/GLFW/glfw3.h \
+	include/GLFW/glfw3native.h \
+	include/vk_platform.h \
 	src/internal.h \
 	src/mappings.h
 CPPFILES :=
