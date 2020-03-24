@@ -114,7 +114,8 @@ TES_MFILES   :=
 TES_CPPFILES :=
 TES_HPPFILES :=
 
-CFLAGS += -std=c99
+OVR_CFLAGS := -std=c99 -Wno-c11-extensions -Wno-pedantic
+OVR_MFLAGS := -Wno-c11-extensions -Wno-pedantic
 
 # this defines all our usual targets
 include targets.mk

@@ -31,6 +31,10 @@ endif
 DEFINE := $(patsubst %,-D%,$(DEFINES)) $(patsubst %,-U%,$(UNDEFINES))
 FWORK := $(patsubst %,-framework %,$(FWORKS))
 
+OVR_CFLAGS   ?=
+OVR_MFLAGS   ?=
+OVR_CXXFLAGS ?=
+
 # Populated below
 TARGETS :=
 
@@ -139,13 +143,13 @@ TES_OFILES := $(TES_CFILES:.c=.c.o) $(TES_CPPFILES:.cpp=.cpp.o) \
 
 # Object file builds
 %.cpp.o: %.cpp
-	$(CXX) -c -o $@ $(CXXFLAGS) $(DEFINE) $(INCLUDE) $<
+	$(CXX) -c -o $@ $(CXXFLAGS) $(OVR_CXXFLAGS) $(DEFINE) $(INCLUDE) $<
 
 %.c.o: %.c
-	$(CC) -c -o $@ $(CFLAGS) $(DEFINE) $(INCLUDE) $<
+	$(CC) -c -o $@ $(CFLAGS) $(OVR_CFLAGS) $(DEFINE) $(INCLUDE) $<
 
 %.m.o: %.m
-	$(CC) -c -o $@ $(MFLAGS) $(DEFINE) $(INCLUDE) $<
+	$(CC) -c -o $@ $(MFLAGS) $(OVR_MFLAGS) $(DEFINE) $(INCLUDE) $<
 
 %.tes.cpp.o: %.tes.cpp
 	$(CXX) -c -o $@ $(CXXFLAGS) $(DEFINE) $(INCLUDE) $<
