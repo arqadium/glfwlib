@@ -1,5 +1,11 @@
-# The canonical out-of-tree build subdirectory
-build
+
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.exe
+*.dll
 
 # Visual Studio clutter
 _ReSharper*
@@ -24,38 +30,15 @@ GLFW.xcodeproj
 
 # macOS clutter
 .DS_Store
+.AppleDouble
+.LSOverride
 
-# Makefile generator clutter
-Makefile
+# Icon must end with two \r
+Icon
 
-# Ninja generator clutter
-build.ninja
-rules.ninja
-.ninja_deps
-.ninja_log
+# Thumbnails
+._*
 
-# CMake clutter
-CMakeCache.txt
-CMakeFiles
-CMakeScripts
-CMakeDoxyfile.in
-CMakeDoxygenDefaults.cmake
-cmake_install.cmake
-cmake_uninstall.cmake
-
-# Generated files
-docs/Doxyfile
-docs/html
-docs/warnings.txt
-docs/doxygen_sqlite3.db
-src/glfw_config.h
-src/glfw3.pc
-src/glfw3Config.cmake
-src/glfw3ConfigVersion.cmake
-src/wayland-pointer-constraints-unstable-v1-client-protocol.h
-src/wayland-pointer-constraints-unstable-v1-protocol.c
-src/wayland-relative-pointer-unstable-v1-client-protocol.h
-src/wayland-relative-pointer-unstable-v1-protocol.c
 
 # Compiled binaries
 src/libglfw.so
@@ -101,4 +84,3 @@ tests/timeout
 tests/title
 tests/triangle-vulkan
 tests/windows
-

@@ -1,0 +1,19 @@
+This file contains the project’s copypastable boilerplate comment headers.
+
+Boilerplate for C-like languages:
+
+/****************************************************************************\
+ *                            Good Luck Fav Wun™                            *
+ *                                                                          *
+ *                      Copyright © 2020 ARQADIUM LLC.                      *
+ *                       Released under BSD-2-Clause.                       *
+\****************************************************************************/
+
+Hash-based boilerplate (Python, POSIX shell, Makefile):
+
+##############################################################################
+##                            Good Luck Fav Wun™                            ##
+##                                                                          ##
+##                      Copyright © 2020 ARQADIUM LLC.                      ##
+##                       Released under BSD-2-Clause.                       ##
+##############################################################################
